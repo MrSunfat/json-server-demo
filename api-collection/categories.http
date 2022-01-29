@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:3000/api/
+@resourceName = categories
+# Categories
+
+# @name getAllCategories
+GET {{baseUrl}}/{{resourceName}}
+
+###
+# @name addNewCategory
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+    "name": "Macbook Pro M1"
+}
+
+###
+
+# @name updateCategory
+PATCH {{baseUrl}}/{{resourceName}}/2
+Content-Type: application/json
+
+{
+    "name": "Laptop Asus 20 củ"
+}
+
+###
+# @name rmCategory
+DELETE {{baseUrl}}/{{resourceName}}/2

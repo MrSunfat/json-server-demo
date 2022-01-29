@@ -1,0 +1,34 @@
+@baseUrl = http://localhost:3000/api
+@resourceName = products
+# Products
+
+# @name getAllCategories
+GET {{baseUrl}}/{{resourceName}}
+
+###
+
+# @name filterProducts
+GET {{baseUrl}}/{{resourceName}}?price_gte=200
+
+###
+# @name addNewCategory
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+    "name": "Macbook Pro M1"
+}
+
+###
+
+# @name updateCategory
+PATCH {{baseUrl}}/{{resourceName}}/2
+Content-Type: application/json
+
+{
+    "name": "Laptop Asus 20 củ"
+}
+
+###
+# @name rmCategory
+DELETE {{baseUrl}}/{{resourceName}}/2
